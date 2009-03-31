@@ -25,7 +25,7 @@ The repository includes the following scripts:
 
   This script decompresses ZIP-files before they are added to the repository,
   which is useful for OpenDocument files, because this allows git to generate
-  better diffs. Compressed files that are changed, are only equal up to
+  better deltas. Compressed files that are changed, are only equal up to
   the point where the change was made, so everything after that counts as
   different and is saved into the repository again, wasting space.
 
