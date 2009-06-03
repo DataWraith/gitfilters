@@ -18,6 +18,7 @@ The scripts
 
 The scripts were mostly just to play around with, and even though I'm using
 them without problems, they **may or may not eat up your data for breakfast**.
+You have been warned.
 
 The repository includes the following scripts:
 
@@ -29,7 +30,7 @@ The repository includes the following scripts:
   the point where the change was made, so everything after that counts as
   different and is saved into the repository again, wasting space.
 
-  Optionally, the script will also strip unnecessary data from OpenDocument
+  Optionally, the filter will also strip unnecessary data from OpenDocument
   files (e.g. the thumbnails).
 
 * `filter_sqlite_clean.rb` / `filter_sqlite_smudge.rb`
@@ -40,12 +41,22 @@ The repository includes the following scripts:
 
   You could, for example, track .[anki]-files using this filter-pair.
 
+* `filter_stripwhitespace_clean.rb`
+
+  This filter strips whitespace from the end of each line in a text file,
+  and also adds a newline character at the end of the file unless there
+  already is one. This makes the output of `git diff` look nicer.
+
 * `filter_pdf_clean.rb` / `filter_pdf_smudge.rb` (experimental)
 
-  These filters (un)compress PDF-files using `pdftk`, which may (or may not)
-  help with the compression efficiency inside of git's pack-files. There
-  seems to be some effect, but it's probably too small to justify the time
-  spent compressing.
+  This filter-pair (un)compresses PDF-files using `pdftk`, which may (or
+  may not) help with the compression efficiency inside of git's pack-files.
+  There seems to be some effect, but it's probably too small to justify the
+  time spent (de)compressing.
+
+  This filter may also cause some trouble when merging, because `pdftk`
+  changes random identifier-strings inside a pdf file every time it is
+  processed...
 
 If you find any of these useful, feel free to use them however you want.
 
