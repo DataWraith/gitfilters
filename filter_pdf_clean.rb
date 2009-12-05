@@ -1,18 +1,18 @@
 #!/usr/bin/env ruby
 
 #
-# This is a simple filter that decompresses PDF-files using pdftk, which
-# needs to be in your PATH. Together with filter_pdf_smudge.rb, this can increase
-# the storage efficiency inside a git-repository.
+# This is a simple filter that decompresses PDF-files using pdftk, which needs
+# to be in your PATH. Together with filter_pdf_smudge.rb, this can increase the
+# storage efficiency inside a git-repository.
 #
 # NOTE: Input and output will _not_ be identical, since pdftk's compress and
 #       uncompress functions are (of course) not directly inverse. If you need
 #       to have PDF files that have to pass an md5sum check or something,
 #       *don't* use this script.
 #
-# If pdftk fails to (un)compress a file, which usually happens because that file
-# is password protected, the script just passes the input back to git, making
-# itself a no-op.
+# If pdftk fails to (un)compress a file, which usually happens because that
+# file is password protected, the script just passes the input back to git,
+# making itself a no-op.
 #
 # To use the scripts, add the following to your .gitconfig:
 #

@@ -11,11 +11,11 @@
 # and
 #
 # b) without the compression, it will be easier for git to determine
-#    similarities between files when making a pack. This is especially important
-#    for OpenDocument files that are changed frequently.
+#    similarities between files when making a pack. This is especially
+#    important for OpenDocument files that are changed frequently.
 #
-# The disadvantage is, that the file inside your working copy will be
-# bigger than before. ALSO: It does not seem to work with .jar-files.
+# The disadvantage is, that the file inside your working copy will be bigger
+# than before. ALSO: It does not seem to work with .jar-files.
 #
 # When the --odf option is passed on the commandline, the script will also
 # remove superfluous files inside a OpenDocument file (cache, thumbnails).

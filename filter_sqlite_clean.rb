@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
 #
-# Together with filter_sqlite_smudge.rb, this file allows you to more efficiently
-# store SQLite-databases inside a git-repository. Instead of a binary file,
-# it makes git store an SQL dump of the database, which is easier to diff and
-# compress.
+# Together with filter_sqlite_smudge.rb, this file allows you to more
+# efficiently store SQLite-databases inside a git-repository. Instead of a
+# binary file, it makes git store an SQL dump of the database, which is easier
+# to diff and compress.
 #
 # This script takes a binary SQLite database from stdin and returns a database
 # dump to stdout by passing the input through 'sqlite3' or, with the "-2"

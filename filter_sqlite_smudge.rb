@@ -1,15 +1,15 @@
 #!/usr/bin/env ruby
 
 #
-# Together with filter_sqlite_clean.rb, this file allows you to more efficiently
-# store SQLite-databases inside a git-repository. Instead of a binary file,
-# it makes git store an SQL dump of the database, which is easier to diff and
-# compress.
+# Together with filter_sqlite_clean.rb, this file allows you to more
+# efficiently store SQLite-databases inside a git-repository. Instead of a
+# binary file, it makes git store an SQL dump of the database, which is easier
+# to diff and compress.
 #
 # This script takes a dump of an SQLite file on stdin and returns a binary
-# SQLite database file to stdout by passing the dump through 'sqlite3' or,
-# with the "-2" command line switch, through 'sqlite'. Both commands should be
-# in your PATH.
+# SQLite database file to stdout by passing the dump through 'sqlite3' or, with
+# the "-2" command line switch, through 'sqlite'. Both commands should be in
+# your PATH.
 #
 # To use the filter, add the following to your .gitconfig:
 #

@@ -11,8 +11,8 @@
 # [filter "stripwhitespace"]
 #         clean = "/path/to/script/filter_stripwhitespace_clean.rb"
 #
-# and add an appropriate glob-pattern to the .gitattributes file at the root
-# of a git working copy, for example:
+# and add an appropriate glob-pattern to the .gitattributes file at the root of
+# a git working copy, for example:
 #
 # *.txt        filter=stripwhitespace
 # *.c          filter=stripwhitespace
