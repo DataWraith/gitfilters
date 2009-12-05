@@ -42,7 +42,11 @@ set -e
 
 # Check for Info-ZIP, and exit if it's not found
 VERSION_STR=`zip -v | head -1`
-[[ $VERSION_STR == *Info-ZIP* ]] || exit 1
+if ! [[ $VERSION_STR == *Info-ZIP* ]]
+then
+  echo "filter_zip_clean.sh needs Info-ZIP installed to work! (\"sudo apt-get install unzip\")"
+  exit 1
+fi
 
 # Get working directory to restore later
 CUR_PWD=`pwd`
