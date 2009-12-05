@@ -22,7 +22,7 @@ You have been warned.
 
 The repository includes the following scripts:
 
-* `filter_zip_clean.rb`
+* `filter_zip_clean.sh`
 
   This script decompresses ZIP-files before they are added to the repository,
   which is useful for OpenDocument files, because this allows git to generate
