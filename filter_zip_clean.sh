@@ -20,8 +20,9 @@
 # When the --odf option is passed on the commandline, the script will also
 # remove superfluous files inside a OpenDocument file (cache, thumbnails).
 #
-# filter_zip_clean.sh relies on Info-Zip (sudo apt-get install unzip) and will
-# not work if it is not available.
+# filter_zip_clean.sh relies on the Info-ZIP Zip and UnZip programs
+# ("sudo apt-get install zip unzip") and will not work if it they are not
+# available.
 #
 # To use the script add the following to your .gitconfig:
 #
@@ -41,10 +42,17 @@
 set -e
 
 # Check for Info-ZIP, and exit if it's not found
-VERSION_STR=`zip -v | head -1`
-if ! [[ $VERSION_STR == *Info-ZIP* ]]
+ZIP_VERSION=`zip -v | head -1`
+if ! [[ $ZIP_VERSION == *Info-ZIP* ]]
 then
-  echo "filter_zip_clean.sh needs Info-ZIP installed to work! (\"sudo apt-get install unzip\")"
+  echo "filter_zip_clean.sh needs Info-ZIP Zip installed to work! (\"sudo apt-get install zip\")"
+  exit 1
+fi
+
+UNZIP_VERSION=`unzip -v | head -1`
+if ! [[ $UNZIP_VERSION == *Info-ZIP* ]]
+then
+  echo "filter_zip_clean.sh needs Info-ZIP UnZip installed to work! (\"sudo apt-get install unzip\")"
   exit 1
 fi
 
