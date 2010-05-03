@@ -51,7 +51,7 @@ begin
   }
 
   # Dump database
-  output = `#{sqlite_cmd} #{tmpinput} .dump .quit`
+  output = `#{sqlite_cmd} #{tmpinput} .dump`
 
   # Check result
   if ($? == 0)

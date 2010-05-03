@@ -51,7 +51,7 @@ begin
   }
 
   # Convert dump into a binary database file
-  `#{sqlite_cmd} #{tmpoutput} ".read #{tmpinput}" .quit`
+  `#{sqlite_cmd} #{tmpoutput} ".read #{tmpinput}"`
 
   # Check result
   if ($? == 0)
