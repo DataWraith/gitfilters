@@ -1,3 +1,9 @@
+**Status**: Abandoned. 
+
+You probably shouldn't be keeping PDF, ZIP or sqlite files
+in git in the first place... The repository has been useful
+for people in the past though, so I'm leaving it here for posterity.
+
 gitattributes filter-scripts
 ============================
 
